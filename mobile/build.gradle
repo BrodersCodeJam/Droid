@@ -23,4 +23,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     wearApp project(':wear')
     compile 'com.google.android.gms:play-services:+'
+    compile 'com.google.zxing:android-integration:1.7'
+    compile files('libs/notifications-1.0.1.jar')
+    compile files('libs/notification-hubs-0.4.jar')
 }
