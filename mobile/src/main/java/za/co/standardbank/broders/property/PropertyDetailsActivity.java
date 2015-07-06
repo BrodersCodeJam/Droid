@@ -91,7 +91,8 @@ public class PropertyDetailsActivity extends Activity {
     }
 
     private void populateProperty(PropertyInfo property) {
-        ((TextView) findViewById(R.id.price_text_view)).setText(NumberFormat.getCurrencyInstance(new Locale("en","ZA")).format(property.getAmount()));
+        String price =  property.getAmount() == null ? "Not Availiable" : NumberFormat.getCurrencyInstance(new Locale("en","ZA")).format(property.getAmount());
+        ((TextView) findViewById(R.id.price_text_view)).setText(price);
         ((TextView) findViewById(R.id.street_text_view)).setText(property.getStreet());
         ((TextView) findViewById(R.id.suburb_text_view)).setText(property.getSuburb());
         ((TextView) findViewById(R.id.city_text_view)).setText(property.getCity());
