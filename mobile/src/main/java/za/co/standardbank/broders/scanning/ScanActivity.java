@@ -28,9 +28,13 @@ public class ScanActivity extends Activity {
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-        if (scanningResult != null) {
+        IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        if (scanResult != null) {
+            Bundle bundle = new Bundle();
+            bundle.putString("PROPERTY_ID", scanResult.getContents());
+
             Intent propertyDetailsIntent = new Intent(this, PropertyDetailsActivity.class);
+            propertyDetailsIntent.putExtra("EXTRA", bundle);
             startActivity(propertyDetailsIntent);
         }else{
             Toast toast = Toast.makeText(getApplicationContext(), "No scan data received!", Toast.LENGTH_SHORT);
