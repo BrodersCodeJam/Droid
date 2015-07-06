@@ -17,13 +17,20 @@ import za.co.standardbank.broders.scanning.ScanActivity;
 
 public class MainActivity extends Activity {
 
-    private AutoCompleteTextView mEmailView;
+    private EditText mEmailView;
     private EditText mPasswordView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mEmailView = (EditText) findViewById(R.id.username);
+        mEmailView.setText("customer@standardbank.com");
+
+        mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordView.setText("Password@1");
+
         NotificationHubHelper.init(this);
     }
 
@@ -34,8 +41,8 @@ public class MainActivity extends Activity {
     }
 
     public void login(View view) {
-        Intent propertyDetailsIntent = new Intent(this, PropertyDetailsActivity.class);
-        startActivity(propertyDetailsIntent);
+        attemptLogin();
+
     }
 
     public void attemptLogin() {
@@ -47,6 +54,8 @@ public class MainActivity extends Activity {
         String password = mPasswordView.getText().toString();
 
         if (validateForm(email, password)) {
+            Intent propertyDetailsIntent = new Intent(this, PropertyDetailsActivity.class);
+            startActivity(propertyDetailsIntent);
 //            showProgress(true);
 //            mAuthTask = new UserLoginTask(email, password);
 //            mAuthTask.execute((Void) null);

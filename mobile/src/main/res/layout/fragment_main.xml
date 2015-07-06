@@ -9,32 +9,32 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/email"
+        android:layout_above="@+id/username"
         android:scaleType="centerCrop"
         android:src="@drawable/standard_bank_background" />
 
-    <AutoCompleteTextView
-        android:id="@+id/email"
+    <EditText
+        android:id="@id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/password"
+        android:layout_above="@+id/password"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:singleLine="true" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/login"
+        android:layout_above="@+id/login"
         android:hint="@string/prompt_password"
         android:inputType="textPassword"
         android:maxLines="1"
         android:singleLine="true" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/scan"
