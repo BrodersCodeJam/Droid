@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import za.co.standardbank.broders.messaging.NotificationHubHelper;
 import za.co.standardbank.broders.property.PropertyDetailsActivity;
 import za.co.standardbank.broders.scanning.ScanActivity;
 
@@ -17,6 +18,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        NotificationHubHelper.init(this);
     }
 
 

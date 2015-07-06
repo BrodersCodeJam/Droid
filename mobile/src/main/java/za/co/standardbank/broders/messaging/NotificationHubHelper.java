@@ -14,8 +14,9 @@ import com.microsoft.windowsazure.notifications.NotificationsManager;
 public class NotificationHubHelper {
 
     private static final String SENDER_ID = "907271717475";
-    private static final String connectionString = "Endpoint=sb://broderz-ns.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=Fa0tsWBuaX4Iu44TjNFeMFXc0MigBwvo3eMSr10pjGg=";
-    private static final String hubName = "broderz";
+    //private static final String connectionString = "Endpoint=sb://broderz-ns.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=Fa0tsWBuaX4Iu44TjNFeMFXc0MigBwvo3eMSr10pjGg=";
+      private static final String connectionString = "Endpoint=sb://broders.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=a0wHB1lUPr1Sq2Eb2TQsIRsEmOYAKoEW6xV2n7ke3W8=";
+    private static final String hubName = "broders";
     private static GoogleCloudMessaging gcm;
     private static NotificationHub hub;
 
