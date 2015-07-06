@@ -6,3 +6,6 @@
 /build
 /captures
 *.iml
+/.idea
+/mobile/mobile.iml
+/wear/wear.iml
