@@ -4,10 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
 import za.co.standardbank.broders.messaging.NotificationHubHelper;
@@ -98,8 +95,6 @@ public class MainActivity extends Activity {
         }
 
         if (cancel) {
-            // There was an error; don't attempt login and focus the first
-            // form field with an error.
             focusView.requestFocus();
         }
 
