@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/mobile/libs/notifications-1.0.1.jar" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/mobile/src/main/java/za/co/standardbank/broders/messaging/NotificationHubHandler.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/mobile/src/main/java/za/co/standardbank/broders/messaging/NotificationHubHelper.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/mobile/src/main/res/values/strings_activity_login.xml" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
