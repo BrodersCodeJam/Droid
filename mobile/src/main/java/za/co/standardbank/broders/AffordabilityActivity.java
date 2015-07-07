@@ -143,7 +143,7 @@ public class AffordabilityActivity extends Activity {
 
                     // set dialog message
                     alertDialogBuilder
-                            .setMessage("You Are 1 Step Closer")
+                            .setMessage("You are 1 step closer to owning your dream home.")
                             .setCancelable(false)
                             .setPositiveButton("Close", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {

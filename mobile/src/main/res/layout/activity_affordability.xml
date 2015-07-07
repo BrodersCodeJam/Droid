@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background_sbg_joburgblur"
     tools:context="za.co.standardbank.broders.AffordabilityActivity">
 
 
@@ -16,6 +17,7 @@
 
         <TextView
             android:id="@+id/textView2"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -25,6 +27,7 @@
 
         <EditText
             android:id="@+id/income_text_view"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -35,6 +38,7 @@
 
         <TextView
             android:id="@+id/textView5"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -44,6 +48,7 @@
 
         <EditText
             android:id="@+id/rate_text_view"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -54,6 +59,7 @@
 
         <TextView
             android:id="@+id/textView6"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -63,6 +69,7 @@
 
         <EditText
             android:id="@+id/term_text_view"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -73,6 +80,7 @@
 
         <TextView
             android:id="@+id/textView7"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -82,6 +90,7 @@
 
         <EditText
             android:id="@+id/potential_text_view"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -91,12 +100,13 @@
 
         <TextView
             android:id="@+id/textView3"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/potential_text_view"
             android:paddingTop="16dp"
-            android:text="Required"
+            android:text="Required Loan Amount"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
@@ -106,7 +116,7 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/textView3"
             android:textColor="@android:color/holo_blue_dark"
-            android:text="Required Loan Amount"
+            android:text="Unavailiable"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
@@ -129,6 +139,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:padding="8dp"
             android:layout_below="@id/required_text_view"
             android:background="@android:color/holo_red_light"
             android:text="Not Enough Cash? Play Lotto"

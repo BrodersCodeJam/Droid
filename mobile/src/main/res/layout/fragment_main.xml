@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
+    android:background="@drawable/background_sbg_joburgblur"
     tools:context=".MainActivityFragment">
 
     <ImageView
@@ -10,11 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/username"
-        android:scaleType="centerCrop"
-        android:src="@drawable/standard_bank_background" />
+        android:scaleType="centerInside"
+        android:src="@drawable/logo_standardbank_flag_blue" />
 
     <EditText
         android:id="@id/username"
+        android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/password"
@@ -25,6 +27,7 @@
 
     <EditText
         android:id="@id/password"
+        android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/login"

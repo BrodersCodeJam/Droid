@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background_sbg_joburgblur"
     tools:context="za.co.standardbank.broders.property.PropertyDetailsActivity">
 
     <LinearLayout
@@ -16,6 +17,7 @@
 
     <TextView
         android:id="@+id/price_text_view"
+        android:textColor="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="30dp"
@@ -24,6 +26,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:textColor="@android:color/white"
         android:layout_height="wrap_content">
 
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -39,11 +42,13 @@
 
                 <TextView
                     android:text="Street: "
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/street_text_view"
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
             </TableRow>
@@ -55,11 +60,13 @@
 
                 <TextView
                     android:text="Suburb: "
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/suburb_text_view"
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
             </TableRow>
@@ -71,11 +78,13 @@
 
                 <TextView
                     android:text="City: "
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/city_text_view"
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             </TableRow>
 
@@ -86,11 +95,13 @@
 
                 <TextView
                     android:text="Province: "
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/province_text_view"
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
             </TableRow>
@@ -102,11 +113,13 @@
 
                 <TextView
                     android:text="Website: "
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/website_text_view"
+                    android:textColor="@android:color/white"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
             </TableRow>
