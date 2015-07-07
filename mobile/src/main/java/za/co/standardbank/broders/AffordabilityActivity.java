@@ -51,6 +51,23 @@ public class AffordabilityActivity extends Activity {
             }
         });
 
+        ((EditText) findViewById(R.id.term_text_view)).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                calculateLoanAmount();
+            }
+        });
+
     }
 
     @Override
@@ -88,9 +105,34 @@ public class AffordabilityActivity extends Activity {
 
         if (potentialLoanAmount >= requiredLoanAmount) {
             (findViewById(R.id.button)).setVisibility(View.VISIBLE);
+            (findViewById(R.id.lotto)).setVisibility(View.GONE);
         } else {
             (findViewById(R.id.button)).setVisibility(View.GONE);
+            (findViewById(R.id.lotto)).setVisibility(View.VISIBLE);
         }
+    }
+
+    public void playLotto(View view) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        // set title
+        alertDialogBuilder.setTitle("Lotto Picks Entered");
+
+        // set dialog message
+        alertDialogBuilder
+                .setMessage("You Have a 1 in 100 000 000 chance of owning this house")
+                .setCancelable(false)
+                .setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
     }
 
     public void appleGo(View view) {

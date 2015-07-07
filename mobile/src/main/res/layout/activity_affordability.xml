@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/rate_text_view"
-            android:text="Term"
+            android:text="Term (Months)"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <EditText
@@ -69,7 +69,7 @@
             android:layout_below="@+id/textView6"
             android:ems="10"
             android:inputType="number"
-            android:text="360" />
+            android:text="36" />
 
         <TextView
             android:id="@+id/textView7"
@@ -121,6 +121,18 @@
             android:text="Apply"
             android:textColor="@android:color/white"
             android:visibility="gone" />
+
+        <Button
+            android:layout_marginTop="16dp"
+            android:id="@+id/lotto"
+            android:onClick="playLotto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/required_text_view"
+            android:background="@android:color/holo_red_light"
+            android:text="Not Enough Cash? Play Lotto"
+            android:textColor="@android:color/white" />
 
 </RelativeLayout>
 
