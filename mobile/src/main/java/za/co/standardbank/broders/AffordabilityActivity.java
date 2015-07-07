@@ -1,6 +1,8 @@
 package za.co.standardbank.broders;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -89,6 +91,29 @@ public class AffordabilityActivity extends Activity {
         } else {
             (findViewById(R.id.button)).setVisibility(View.GONE);
         }
+    }
+
+    public void appleGo(View view) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+            // set title
+            alertDialogBuilder.setTitle("Homeloan Application Started");
+
+                    // set dialog message
+                    alertDialogBuilder
+                            .setMessage("You Are 1 Step Closer")
+                            .setCancelable(false)
+                            .setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    AffordabilityActivity.this.finish();
+                                }
+                            });
+
+        // create alert dialog
+            AlertDialog alertDialog = alertDialogBuilder.create();
+
+            // show it
+            alertDialog.show();
     }
 
     private double calculateLoanAmount(double rate, int term, double income) {
