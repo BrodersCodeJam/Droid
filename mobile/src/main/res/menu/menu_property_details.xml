@@ -2,14 +2,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="za.co.standardbank.broders.property.PropertyDetailsActivity">
+
+    <item android:id="@+id/action_affordability"
+        android:icon="@drawable/money"
+        android:orderInCategory="100"
+        android:title="Affordability"
+        app:showAsAction="always" />
+
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
-
-    <item android:id="@+id/action_affordability"
-        android:icon="@drawable/money"
-        android:title="Affordability"
-        app:showAsAction="always" />
 </menu>

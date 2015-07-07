@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import org.springframework.http.ResponseEntity;
 
+import java.net.MalformedURLException;
 import java.text.Format;
 import java.text.NumberFormat;
 import java.util.Formatter;
@@ -24,15 +26,16 @@ import za.co.standardbank.broders.AffordabilityActivity;
 import za.co.standardbank.broders.R;
 import za.co.standardbank.broders.services.Service;
 
-public class PropertyDetailsActivity extends Activity {
+public class PropertyDetailsActivity extends ActionBarActivity {
 
     private ProgressBar spinner;
+    private PropertyInfo propertyInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_property_details);
-        spinner=(ProgressBar)findViewById(R.id.progressBar);
+        spinner = (ProgressBar) findViewById(R.id.progressBar);
         UserLoginTask userLoginTask = new UserLoginTask();
         userLoginTask.execute();
     }
@@ -55,6 +58,7 @@ public class PropertyDetailsActivity extends Activity {
 
         if (id == R.id.action_affordability) {
             Intent propertyDetailsIntent = new Intent(this, AffordabilityActivity.class);
+            propertyDetailsIntent.putExtra("LOAN_AMOUNT", propertyInfo.getAmount().toString());
             startActivity(propertyDetailsIntent);
             return true;
         }
@@ -73,7 +77,7 @@ public class PropertyDetailsActivity extends Activity {
         @Override
         protected PropertyInfo doInBackground(Void... params) {
             try {
-                ResponseEntity<PropertyInfo> response = new Service().GET("https://broders.azure-mobile.net/api/PropertyInfo/1", PropertyInfo.class);
+                ResponseEntity<PropertyInfo> response = new Service().GET("https://brodersservice.azure-mobile.net//api/PropertyInfo/1", PropertyInfo.class);
                 return response.getBody();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -85,12 +89,14 @@ public class PropertyDetailsActivity extends Activity {
         @Override
         protected void onPostExecute(final PropertyInfo property) {
             spinner.setVisibility(View.GONE);
+            propertyInfo = property;
             (findViewById(R.id.property_details_table)).setVisibility(View.VISIBLE);
             populateProperty(property);
         }
     }
 
     private void populateProperty(PropertyInfo property) {
+        this.propertyInfo = propertyInfo;
         String price =  property.getAmount() == null ? "Not Availiable" : NumberFormat.getCurrencyInstance(new Locale("en","ZA")).format(property.getAmount());
         ((TextView) findViewById(R.id.price_text_view)).setText(price);
         ((TextView) findViewById(R.id.street_text_view)).setText(property.getStreet());

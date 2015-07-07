@@ -46,16 +46,8 @@ public class Service {
         return new HttpEntity<Object>(t, requestHeaders);
     }
 
-    public <T> ResponseEntity<T> POST(String path, Object request, Class<T> responseObjCls) {
-        return restTemplate.exchange(path, HttpMethod.POST, getRequestEntity(request), responseObjCls);
-    }
-
     public <T> ResponseEntity<T> GET(String path, Class<T> responseObjCls) {
         return restTemplate.exchange(path, HttpMethod.GET, getRequestEntity(), responseObjCls);
-    }
-
-    public <T> ResponseEntity<T> PUT(String path, Object request, Class<T> responseObjCls) {
-        return restTemplate.exchange(path, HttpMethod.PUT, getRequestEntity(request), responseObjCls);
     }
 
 }

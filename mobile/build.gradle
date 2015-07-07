@@ -29,9 +29,9 @@ dependencies {
     wearApp project(':wear')
     compile 'com.google.android.gms:play-services:+'
     compile 'com.google.zxing:android-integration:1.7'
+    compile files('libs/notifications-1.0.1.jar')
+    compile files('libs/notification-hubs-0.4.jar')
     compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
     compile 'org.springframework.android:spring-android-core:1.0.1.RELEASE'
     compile 'com.google.code.gson:gson:2.3.1'
-    compile files('libs/notifications-1.0.1.jar')
-    compile files('libs/notification-hubs-0.4.jar')
 }
