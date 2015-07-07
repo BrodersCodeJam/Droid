@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -92,6 +93,9 @@ public class PropertyDetailsActivity extends ActionBarActivity {
             propertyInfo = property;
             (findViewById(R.id.property_details_table)).setVisibility(View.VISIBLE);
             populateProperty(property);
+            WebView webView = (WebView) findViewById(R.id.webView1);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.loadUrl(property.getUrl());
         }
     }
 
